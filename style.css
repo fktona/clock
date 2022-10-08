@@ -19,7 +19,6 @@ html{
 
 body{
     background: linear-gradient(to right, rgb(26, 25, 25) , rgb(19, 0, 19) );
-    height: 100vh;
     overflow-y: hidden;
 }
 
@@ -86,21 +85,28 @@ nav ul li {
 
 .st_design{
     position: relative;
-    height: 230px;
+    width: 230px;
     aspect-ratio: 1/1;
     border-radius: 50%;
     color: white;
-    margin: auto;
     display: flex;
     justify-content: center;
     isolation: auto;
-    alig-content:center ;
+    align-items:center ;
+  gap: 0.1rem;
     box-shadow:  8px 8px 8px rgba(46, 21, 43, 0.377) ,   -8px -8px 8px rgba(7, 5, 7, 0.24);
     
 }
 
-.st_design input{
+.st_design span{
     color: white;
+}
+
+sub{
+position: absolute;
+    colour: blue;
+    z-index: 9;
+    top: 58%;
 }
 
 .st_design::after{
