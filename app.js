@@ -1,16 +1,14 @@
 let sw =  document.querySelectorAll('.st_design span');
 let ms = document.querySelector('sub');
 let actionButton = document.querySelectorAll('.actionButton button');
-let executeButton = document.querySelectorAll('.down button');
+let executeButton = document.querySelectorAll('.down button')
 let initialTime = 0
 let sec =  0
 let min = 0
 let hr = 0
 
-actionButton[1].onclick = ()  => {
-    actionButton[1].disabled = true
-    actionButton[1]
-  setInterval ( () => { 
+actionButton[1].onclick =  ()  => { 
+ run = setInterval ( () => { 
         initialTime++;
         
          ms.innerHTML = initialTime;
@@ -43,4 +41,22 @@ actionButton[1].onclick = ()  => {
          }
         
        
-}, 10) };
+}, 10) 
+let pause = actionButton[1] 
+pause.innerHTML = 'pause';
+pause.setAttribute('class', 'pause')
+
+pause.onclick = () => {
+    clearInterval(run)
+           let start = pause
+           start.onclick = () =>{
+            run
+           }
+}
+ 
+//actionButton[0].onclick= () => {
+ // 
+}//};
+
+
+
