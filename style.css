@@ -95,7 +95,7 @@ nav ul li {
     align-items:center ;
     
   gap: 0.15rem;
-    box-shadow:  8px 8px 8px rgba(46, 21, 43, 0.377) ,   -8px -8px 8px rgba(7, 5, 7, 0.24);
+    box-shadow:  8px 8px 8px  rgba(46, 21, 43, 0.377) ,   -8px -8px 8px rgba(36, 23, 36, 0.24);
     
 }
 
@@ -118,11 +118,10 @@ position: absolute;
     position: absolute;
     align-self: center ;
     width: 80%;
-    background: rgba(0, 0, 0, 0.219) ;
     aspect-ratio: 1/1;
     border-radius: 50%;
     z-index: -3;
-    box-shadow: inset 5px 5px 8px rgba(20, 20, 20, 0.377) ,  inset -8px -8px 8px rgba(7, 5, 7, 0.24)
+    box-shadow: inset 4px 4px 4px rgba(37, 24, 39, 0.377) ,  inset -4px -4px 4px rgba(58, 1, 58, 0.24)
 }
 
 /*.st_design::before{
@@ -180,7 +179,7 @@ color: red;
     color: white;
 }
 .lap{
-    color: white;
+    color: blue;
 }
 .list{
     display: flex;
