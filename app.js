@@ -1,4 +1,5 @@
-let sw =  document.querySelectorAll('.st_design span');
+let sw = Array.from(document.querySelectorAll('.st_design span'));
+let w = [7, 8 , 9, 9]
 let ms = document.querySelector('sub');
 let actionButton = document.querySelectorAll('.actionButton button');
 let executeButton = document.querySelectorAll('.down button')
@@ -6,6 +7,7 @@ let initialTime = 0
 let sec =  0
 let min = 0
 let hr = 0
+let time  = [hr ,min , sec]
 let run = -1
 let stop = 0
 
@@ -46,7 +48,9 @@ pause.setAttribute('class', 'pause');
             sw[0].innerHTML = "0" + hr + ":"
             sw[1].innerHTML = "0" + 0 + ":"
          }
-        
+         else  if (hr > 9){
+            sw[0].innerHTML = hr
+         }
        
 }, 10) 
   } else {
@@ -71,15 +75,18 @@ start.setAttribute('class', 'playPause')
     }
      else {
         let reset = actionButton[0]
-           stop.setAttribute('class', 'stopReset')
-        stop.innerHTML 
+           reset.setAttribute('class', 'stopReset')
+        reset.innerHTML ='stop'
        
-        sw[0].textContent = '00 :'
-        sw[1].textContent = '00 :'
-        sw[2].textContent = '00'
-        ms.textContent = '00'
-        stop = 0
+      
 
      }
+ }
+ 
+ actionButton[2].onclick = () => {
+    let list = document.createElement('input');
+    list.setAttribute('tag', 'input')
+    document.querySelector('.list').append(list)
 
  }
+               

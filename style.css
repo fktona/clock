@@ -175,7 +175,7 @@ position: absolute;
 .stopReset{
 color: red;
 }
-.Reset{
+.reset{
     color: white;
 }
 .lap{
@@ -183,12 +183,15 @@ color: red;
 }
 .list{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1.5rem;
     position: relative;
     padding: 1.5rem;
     width: 80%;
     color: white;
+    overflow-y: scroll;
+    height: 20vh;
+    
 }
 
 .list input{
