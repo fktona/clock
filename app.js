@@ -23,7 +23,7 @@ pause.setAttribute('class', 'pause');
          
 
 
-         if ( initialTime >= 99){
+         if ( initialTime > 99){
             sec++;
             sw[2].innerHTML = "0" + sec
             initialTime = 0
@@ -33,7 +33,7 @@ pause.setAttribute('class', 'pause');
          }
 
 
-         if ( sec >= 59){
+         if ( sec > 59){
             min++;
             sw[1].innerHTML = "0" +  min + ':'
             sec = 0
@@ -42,10 +42,10 @@ pause.setAttribute('class', 'pause');
             sw[1].innerHTML = min
          }
           
-         if ( min >= 59){
+         if ( min > 59){
             hr++;
-            sw[0].innerHTML = "0" + hr + ":"
-            sw[1].innerHTML = "0" + 0 + ":"
+            sw[0].innerHTML = "0" + hr +  ":"
+            sw[1].innerHTML = "0" + 0 +  ":"
          }
          else  if (hr > 9){
             sw[0].innerHTML = hr
@@ -96,9 +96,20 @@ start.setAttribute('class', 'playPause')
  
  actionButton[2].onclick = () => {
     let list = document.createElement('input');
+    listBUTTON = document.createElement('button')
+    listBUTTON.setAttribute('class', 'listBUTTON');
+    listBUTTON.innerHTML = 'note'
      list.readOnly = true
-    document.querySelector('.list').append(list)
+    document.querySelector('.list').append(list , listBUTTON)
       sw.reduce((a , b) => { list.value +=  b.textContent }, 0)
-
+      listBUTTON.onclick = () => {
+        let y =  document.createElement('textarea')
+        y.classList.toggle("show")
+        document.querySelector('.ret').append(y)
+      }
  }
                
+
+executeButton[1].onclick = ()=> {
+   document.querySelector('.list').innerHTML = '';
+}
