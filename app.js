@@ -7,7 +7,6 @@ let initialTime = 0
 let sec =  0
 let min = 0
 let hr = 0
-let time  = [hr ,min , sec]
 let run = -1
 let stop = 0
 
@@ -65,6 +64,7 @@ start.setAttribute('class', 'playPause')
  
 };
 
+
  actionButton[0].onclick = () => {
     if(stop === 0 && run != -1){
         let reset = actionButton[0]
@@ -77,16 +77,28 @@ start.setAttribute('class', 'playPause')
         let reset = actionButton[0]
            reset.setAttribute('class', 'stopReset')
         reset.innerHTML ='stop'
-       
+        stop = 0 
       
+      sw.reduce((a , b , i ) => {
+         if(i < 2)  b.innerHTML = '00 : '
+        else if( i > 1) {
+         b.innerHTML = '00'
+        }
+      }, 0)
+      ms.innerHTML = "00"
 
-     }
+    sec = 0
+    hr = 0
+    initialTime = 0
+    min = 0
+   }
  }
  
  actionButton[2].onclick = () => {
     let list = document.createElement('input');
-    list.setAttribute('tag', 'input')
+     list.readOnly = true
     document.querySelector('.list').append(list)
+      sw.reduce((a , b) => { list.value +=  b.textContent }, 0)
 
  }
                
