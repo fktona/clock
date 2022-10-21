@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>aik clock</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header> <span> aik</span> clock</header>
-    <nav>
-        <ul>
-            <li>clock</li>
-            <li>stopwatch</li>
-            <li>timer</li>
-        </ul>
-    </nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading"></div>
+    <div class="loadingText">
+      <span>a</span>
+      <span>i</span>
+      <span>k</span>
+      <span>c</span>
+      <span>l</span>
+      <span>o</span>
+      <span>c</span>
+      <span>k</span>
+    </div>
     <div class="container">
-        <div class="clock">
-            
+      <header><span> aik</span> clock</header>
+      <nav>
+        <ul>
+          <li>stopwatch</li>
+        </ul>
+      </nav>
+      <div class="stopwatch">
+        <input
+          type="text"
+          name="tittle"
+          placeholder="tittle"
+          spellcheck="false"
+          id="tittle"
+        />
+        <div class="st_design">
+          <span class="hr">00 :</span>
+          <span class="min">00 :</span>
+          <span class="sec">00</span>
+          <sub class="ms">00</sub>
         </div>
-        <div class="stopwatch">
-            <div class="st_design">
-           <span class="hr">00 :</span>
-           <span class="min">00 :</span>
-           <span class="sec">00</span>
-           <sub class="ms">00</sub>
-           
-        </div>
-             <div class="actionButton">
-            <button class="stopReset">stop</button>
-            <button class="playPause">play</button>
-            <button class="lap">Lap</button> 
+        <div class="actionButton">
+          <button type="reset" class="stopReset">stop</button>
+          <button type="submit" class="playPause">play</button>
+          <button type="submit" class="lap">Lap</button>
         </div>
 
-        <div class="list">
-            <div class="ret"></div>
+        <div class="list"></div>
+        <div class="download">cggjkb</div>
+        <div class="down">
+          <button>Download</button>
+          <button>clear</button>
         </div>
-      
-            <div class="down">
-                <button>Print</button>
-                <button>clear</button>
-            </div>
+      </div>
+      <div class="confirmation">
+        <span>ARE YOU SURE</span>
+        <div>
+          <button>YES</button>
+          <button>NO</button>
         </div>
-        <div class="timer"></div>
+      </div>
     </div>
-</body>
-<script src='app.js'></script>
+  </body>
+  <script src="app.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 </html>
