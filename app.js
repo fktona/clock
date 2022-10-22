@@ -183,12 +183,12 @@ executeButton[0].onclick = (event) => {
   html2pdf().from(get).set(opt).save();
 
   get.remove();
-setTimeout(() => {
+
    
 
   info.reduce((a, b) => {
     b.classList.replace("finalnote", "none");
   }, 0);
-}, 1000);
+
 };
 
