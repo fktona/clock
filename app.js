@@ -133,12 +133,13 @@ actionButton[2].onclick = () => {
     let eachButton = containerElements.querySelector("button");
     let eachspan = containerElements.querySelector("span");
     eachspan.classList.add("none");
-    eachspan.innerHTML = ` @ ${eachTextarea.value + ':'}`;
+    eachspan.innerHTML = ` @ ${eachTextarea.value }`;
     eachButton.onclick = () => {
+      eachTextarea.classList.toggle("show");
       eachTextarea.autofocus = true;
     };
     eachTextarea.onkeyup = () => {
-      eachspan.innerHTML = `@${eachTextarea.value + ':'}`;
+      eachspan.innerHTML = `@${eachTextarea.value}`;
     };
   });
 
@@ -175,12 +176,12 @@ executeButton[0].onclick = (event) => {
   var opt = {
     margin: 1,
     filename: "Result.pdf",
-    image: { type: "jpeg", quality: 0.88 },
-    html2canvas: {scale: 2},
+    image: { type: "jpeg", quality: 0.95 },
+    //html2canvas: {scale: 2},
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
 
-  html2pdf().from(get).set().save();
+  html2pdf().from(get).set(opt).save();
 
   get.remove();
 

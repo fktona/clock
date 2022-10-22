@@ -446,7 +446,7 @@ textarea {
   padding: 0.2rem;
 }
 .none {
-  display: block;
+  display: none;
 }
 .downloads {
   position: relative;
@@ -454,7 +454,10 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0,5rem;
+  gap: 0.5rem;
+  border: 1px solid rgb(211, 45, 161);
+
+  
 }
 .ni {
   color: rgb(211, 45, 161);
