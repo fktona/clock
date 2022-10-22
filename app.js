@@ -132,14 +132,13 @@ actionButton[2].onclick = () => {
     let eachTextarea = containerElements.querySelector("textarea");
     let eachButton = containerElements.querySelector("button");
     let eachspan = containerElements.querySelector("span");
-    eachspan.classList.add("none");
     eachspan.innerHTML = ` @ ${eachTextarea.value }`;
+    eachspan.classList.add("none");
     eachButton.onclick = () => {
       eachTextarea.classList.toggle("show");
-      eachTextarea.autofocus = true;
     };
-    eachTextarea.onkeyup = () => {
-      eachspan.innerHTML = `@${eachTextarea.value}`;
+    eachTextarea.oninput = () => {
+      eachspan.innerHTML  = `@${eachTextarea.value}`;
     };
   });
 
@@ -165,7 +164,7 @@ executeButton[0].onclick = (event) => {
   let tittle = heading.cloneNode(true);
   tittle.classList.add("ni");
 
-  get.append(tittle);
+  get.append(tittle.value);
   let info = Array.from(document.querySelectorAll(".list span"));
   info.reduce((a, b) => {
     b.classList.replace("none", "finalnote");

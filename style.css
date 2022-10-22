@@ -422,7 +422,7 @@ textarea {
 
 .confirmation {
   background: rgba(255, 255, 255, 0.507);
-  width: 50vw;
+  position: relative;
   aspect-ratio: 1/0.5;
   max-width: 150px;
   margin: auto;
@@ -455,6 +455,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  text-align: center;
   z-index: 455;
   border: 1px solid rgb(211, 45, 161);
 
