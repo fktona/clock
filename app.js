@@ -181,7 +181,7 @@ executeButton[0].onclick = (event) => {
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
 
-  html2pdf().from(get).set(opt).save();
+  html2pdf().from(get).set().save();
 
   get.remove();
 
