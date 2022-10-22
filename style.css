@@ -152,7 +152,6 @@ body {
   color: white;
   text-align: start;
   transition: all 3s;
-  font-size: 1.3rem;
   text-transform: uppercase;
 }
 #tittle:focus {
@@ -341,7 +340,6 @@ sub {
   display: flex;
   flex-direction: column-reverse;
   gap: 1.5rem;
-
   position: relative;
   justify-content: center;
   padding: 1.5rem;
@@ -401,7 +399,7 @@ input {
 .stopwatch .down {
   width: 100%;
   position: relative;
-  padding-top: 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -434,7 +432,7 @@ textarea {
   flex-direction: column;
   justify-content: space-around;
   font-size: 0.6rem;
-  margin-bottom: 1rem;
+  top: -20px;
 }
 .confirmation > div {
   position: relative;
@@ -448,7 +446,7 @@ textarea {
   padding: 0.2rem;
 }
 .none {
-  display: none;
+  display: block;
 }
 .downloads {
   position: relative;
@@ -458,7 +456,6 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
   border: 1px solid rgb(211, 45, 161);
 }
 .ni {
@@ -470,11 +467,13 @@ textarea {
   display: block;
   position: relative;
   text-align: center;
+  width: 80%;
   word-wrap: break-word;
   font-weight: 400;
   font-size: 17px;
   text-transform: capitalize;
-  padding: 0.7rem;
+  margin-top: 0.7rem;
+  padding: 0.4rem;
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.473);
 }

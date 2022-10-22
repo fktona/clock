@@ -124,6 +124,7 @@ actionButton[2].onclick = () => {
     inputTime.value += b.textContent;
     TimeNote.value = inputTime.value;
   }, 0);
+
   const containerElements = Array.from(document.querySelectorAll(".list div"));
   containerElements.forEach((containerElements) => {
     containerElements.append(inputTime, listBUTTON, TimeNote, finalNOTE);
@@ -132,14 +133,13 @@ actionButton[2].onclick = () => {
     let eachButton = containerElements.querySelector("button");
     let eachspan = containerElements.querySelector("span");
     eachspan.classList.add("none");
-    eachspan.innerHTML = eachTextarea.value;
+    eachspan.innerHTML = ` @ ${eachTextarea.value + ':'}`;
     eachButton.onclick = () => {
       eachTextarea.classList.toggle("show");
-      eachspan.classList.toggle("finalnote");
       eachTextarea.autofocus = true;
     };
     eachTextarea.onkeyup = () => {
-      eachspan.innerHTML = eachTextarea.value;
+      eachspan.innerHTML = `@${eachTextarea.value + ':'}`;
     };
   });
 
