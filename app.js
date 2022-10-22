@@ -23,7 +23,7 @@ setTimeout(() => {
   document.querySelector(".loading").remove();
   document.querySelector(".loadingText").remove();
   document.querySelector(".container").setAttribute("class", "showAll");
-}, 10);
+}, 4000);
 
 // running the stopwatch
 actionButton[1].onclick = () => {
