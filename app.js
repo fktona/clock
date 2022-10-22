@@ -135,7 +135,6 @@ actionButton[2].onclick = () => {
     eachspan.classList.add("none");
     eachspan.innerHTML = ` @ ${eachTextarea.value + ':'}`;
     eachButton.onclick = () => {
-      eachTextarea.classList.toggle("show");
       eachTextarea.autofocus = true;
     };
     eachTextarea.onkeyup = () => {
@@ -177,7 +176,7 @@ executeButton[0].onclick = (event) => {
     margin: 1,
     filename: "Result.pdf",
     image: { type: "jpeg", quality: 0.88 },
-    html2canvas: { scale: 2 },
+    html2canvas: {scale: 2},
     jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
   };
 
